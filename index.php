@@ -1,3 +1,6 @@
+<?php
+$excludedDirectories = [".git", "..", "."];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +21,7 @@
     <ul>
         <?php
         $preUrl = dirname($_SERVER["PHP_SELF"]);
-        $files = array_diff(scandir(__DIR__), ["..", "."]);
+        $files = array_diff(scandir(__DIR__), $excludedDirectories);
         $dirs = [];
         foreach ($files as $k => $file) {
             if (is_dir(__DIR__ . "/" . $file)) {
