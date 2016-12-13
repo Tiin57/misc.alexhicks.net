@@ -20,7 +20,7 @@ $excludedDirectories = [".git", "..", "."];
     <p>You're here.</p>
     <ul>
         <?php
-        $preUrl = dirname($_SERVER["PHP_SELF"]);
+        $preUrl = "https://misc.alexhicks.net";
         $files = array_diff(scandir(__DIR__), $excludedDirectories);
         $dirs = [];
         foreach ($files as $k => $file) {
